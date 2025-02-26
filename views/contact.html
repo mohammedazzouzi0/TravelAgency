@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <title> Contact Us - Responsive Page Design</title>
+    <link rel="shortcut icon" type="/image/jpg" href="/images/news2.png"/>
+    <link rel="stylesheet" href="/css/styleContact.css">
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+  </style>
+  
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <div class="contactInfo">
+            <div>
+                <div class="footer-contact">
+                    <h4 class="contact-title">Contact Us</h4>
+                    <p class="contact-text">Feel free to contact and reach us !!</p>
+                    <ul>
+                        
+                        <li class="contact-item">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <a href="mailto:assou-ami@upf.ac.ma" class="contact-link">assou-ami@upf.ac.ma</a>
+                        </li>
+                        <li class="contact-item">
+                          <ion-icon name="mail-outline"></ion-icon>
+                          <a href="mailto:assou-aym@upf.ac.ma" class="contact-link">Aassou-aym@upf.ac.ma</a>
+                      </li>
+                      <li class="contact-item">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <a href="mailto:saddok-yas@upf.ac.ma" class="contact-link">saddok-yas@upf.ac.ma</a>
+                    </li>
+                    <li class="contact-item">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <a href="mailto:elaji-saf@upf.ac.ma" class="contact-link">elaji-saf@upf.ac.ma</a>
+                  </li>
+                  <li class="contact-item">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <a href="mailto:berdij-cha@upf.ac.ma" class="contact-link">berdij-cha@upf.ac.ma</a>
+                </li>
+                        <li class="contact-item">
+                            <ion-icon name="location-outline"></ion-icon>
+                            <address>Morocco-Fez UPF</address>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <h2>Send a Message</h2>
+            
+                <form action="/contact-submit" method="POST">
+                  
+                  <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" name="first_name" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="last_name" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" name="email" required>
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="mobile_number" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="message" required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Send">
+                        <a href="/index" class="button">Back Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<script> // ---------Responsive-navbar-active-animation-----------
+  function test(){
+    var tabsNewAnim = $('#navbarSupportedContent');
+    var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+    var activeItemNewAnim = tabsNewAnim.find('.active');
+    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+    var itemPosNewAnimTop = activeItemNewAnim.position();
+    var itemPosNewAnimLeft = activeItemNewAnim.position();
+    $(".hori-selector").css({
+      "top":itemPosNewAnimTop.top + "px", 
+      "left":itemPosNewAnimLeft.left + "px",
+      "height": activeWidthNewAnimHeight + "px",
+      "width": activeWidthNewAnimWidth + "px"
+    });
+    $("#navbarSupportedContent").on("click","li",function(e){
+      $('#navbarSupportedContent ul li').removeClass("active");
+      $(this).addClass('active');
+      var activeWidthNewAnimHeight = $(this).innerHeight();
+      var activeWidthNewAnimWidth = $(this).innerWidth();
+      var itemPosNewAnimTop = $(this).position();
+      var itemPosNewAnimLeft = $(this).position();
+      $(".hori-selector").css({
+        "top":itemPosNewAnimTop.top + "px", 
+        "left":itemPosNewAnimLeft.left + "px",
+        "height": activeWidthNewAnimHeight + "px",
+        "width": activeWidthNewAnimWidth + "px"
+      });
+    });
+  }
+  $(document).ready(function(){
+    setTimeout(function(){ test(); });
+  });
+  $(window).on('resize', function(){
+    setTimeout(function(){ test(); }, 500);
+  });
+  $(".navbar-toggler").click(function(){
+    $(".navbar-collapse").slideToggle(300);
+    setTimeout(function(){ test(); });
+  });
+  
+  
+  
+  // --------------add active class-on another-page move----------
+  jQuery(document).ready(function($){
+    // Get current path and find target link
+    var path = window.location.pathname.split("/").pop();
+  
+    // Account for home page with empty path
+    if ( path == '' ) {
+      path = 'index.html';
+    }
+  
+    var target = $('#navbarSupportedContent ul li a[href="'+path+'"]');
+    // Add active class to target link
+    target.parent().addClass('active');
+  });
+  
+  
+  
+  
+  // Add active class on another page linked
+  // ==========================================
+  // $(window).on('load',function () {
+  //     var current = location.pathname;
+  //     console.log(current);
+  //     $('#navbarSupportedContent ul li a').each(function(){
+  //         var $this = $(this);
+  //         // if the current path is like this link, make it active
+  //         if($this.attr('href').indexOf(current) !== -1){
+  //             $this.parent().addClass('active');
+  //             $this.parents('.menu-submenu').addClass('show-dropdown');
+  //             $this.parents('.menu-submenu').parent().addClass('active');
+  //         }else{
+  //             $this.parent().removeClass('active');
+  //         }
+  //     })
+  // });</script>
+</body>
+</html>

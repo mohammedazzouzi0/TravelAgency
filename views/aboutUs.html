@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tourly - Travel agancy</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <section class="tour-search">
+    <div class="container">
+      <form action="/inquire" method="POST" class="tour-search-form">
+
+   <!--    <form action="/submit-inquiry" method="POST" class="tour-search-form">   -->
+        <div class="input-wrapper">
+          <label for="destination" class="input-label">Search Destination*</label>
+          <input type="text" name="destination" id="destination" required="" placeholder="Enter Destination" class="input-field">
+        </div>
+        <div class="input-wrapper">
+          <label for="people" class="input-label">Pax Number*</label>
+          <input type="number" name="people" id="people" required="" placeholder="No.of People" class="input-field">
+        </div>
+        <div class="input-wrapper">
+          <label for="checkin" class="input-label">Checkin Date**</label>
+          <input type="date" name="checkin" id="checkin" required="" class="input-field">
+        </div>
+        <div class="input-wrapper">
+          <label for="checkout" class="input-label">Checkout Date*</label>
+          <input type="date" name="checkout" id="checkout" required="" class="input-field">
+        </div>
+        <button type="submit" class="btn btn-secondary">Inquire now</button>
+      </form>
+      
+
+    </div>
+  </section>
+    <p class="section-text">
+        Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+        Sit ornare
+        mollitia tenetur, aptent.
+      </p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Home</title>
+	<meta name="description" content="Travel">
+	<link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:900" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styleBooking.css">
+</head>
+<body>
+   
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+     $('.menu-toggle').click(function(){
+       $('nav').toggleClass('active')
+     })
+  }) </script>
+  
+  <div id="page1">
+    
+ <img alt="plane" class="plane" src="https://i.ibb.co/52bG3RC/landingpage-assets-0005-plane.png">
+   
+    
+  <div class="right">
+    <h1 class="book">BOOK </h1> 
+    <h1 class="travel">& TRAVEL</h1>
+     <h4> Wherever you go, make yourself at home</h4>
+
+
+
+
+
+      			<form action="/booking" class="reservation" method="POST"   >   
+     <fieldset>
+        <label> DESTINATION</label>
+              <div>
+                <input type="text" id="cities" name="cities" size="20" value="" placeholder="Paris, France" required /></div>
+       
+       <div class="left2">
+        <label>CHECK-IN DATE</label>
+        <input type="date" id="start" name="startTrip"
+               value="2018-07-22"
+               min="2024-01-01" max="2099-12-31" />
+         
+         <label>ADULTS</label>
+         <input list="adults" id="adults-number" name="adultsNumber" />
+
+<datalist id="adults">
+    <option value="1 adult">
+    <option value="2 adults">
+    <option value="3 adults">
+    <option value="+3 adults">
+</datalist>
+    </div>
+
+    <div class ="right2">
+        <label>CHECK-OUT DATE</label>
+        <input type="date" id="end" name="endTrip"
+               value="2024-07-29"
+               min="2024-01-01" max="2090-12-31"/>
+      <label>CHILDREN</label>
+      <input list="children" id="children-number" name="children" />
+
+<datalist id="children"  >
+    <option value="No children">
+    <option value="1">
+    <option value="2">
+    <option value="3">
+</datalist>
+    </div>
+       
+      <div class="button">
+       <input type="submit" class="btn" value="Book" /></div>
+       
+   </fieldset></form>
+  </div>
+     </div>
+
+    
+    <div id="page2">
+    <h1> 25000 </h1>  
+  
+        <img alt="mondo" class="mondo" src="https://i.ibb.co/grLS2HM/Hot-Air-Balloon-960x1153.png">
+      
+      <div class="sinistra"> <h2>Travelers booked lovely trips</h2>
+        <p>Well prepared means well traveled. Your journey starts much before you take your bag and set off. We help to find the ticket and accomodation you need, offer the routes, car, rentals and even book a taxi. Just choose the destination - we will do the rest.<p>
+        <div class="button">
+       <input type="button" class="bottone" value="READ MORE  →" /></div>   
+      </div>
+    </div>
+    
+  <div id="page3">
+    <h2 class="base">Our base &nbsp;&nbsp;&nbsp;&nbsp;consist of</h2>
+    
+    <table>
+  <tr>
+    <th>1 billion</th>
+    <th>120</th> 
+    <th>250</th>
+    <th>4K</th>
+  </tr>
+  <tr>
+    <td>Hotels, guesthouses<br>and apartments</td>
+    <td>Countries</td>
+    <td>Airlines and<br>lowcosters</td>
+    <td>Travel agencies<br>and companies</td>
+  </tr>
+  </table>
+ </div>
+   <div id="sin2">
+      <p class="business">
+Be it business, education, family holiday, a city break with friends or tour, we are here to support your travel.Confortable journey and cozy accomodation - everything to make you feel at home whatever is the corner of the world.
+      </p>
+     
+    
+    
+    <img alt="valigia" class="valigia" src="https://i.ibb.co/v1wJw8B/suitcase-PNG10774.png">
+    
+    </div> 
+    
+
+    
+</body>
